@@ -40,10 +40,12 @@ RUN cmake .. && \
 seqtk can be installed with	
 
 
-`RUN apt-get update && apt-get install -y \
+```
+RUN apt-get update && apt-get install -y \
   seqtk
 
-CMD ["/usr/bin/seqtk"]`
+CMD ["/usr/bin/seqtk"]
+```
 	
 Alternatively kallisto and seqtk can be installed with anaconda with:
 
@@ -70,7 +72,7 @@ the kallisto results directory. The kallisto index file location may need to be
 changed and the other files can be changed as necessary. The main function of 
 ds_and_kal.py can be seen below.
 
-`
+```
 # kallisto index file. change location for your machine.
 kalfile = "~/kallisto_index/Human_GRC38_cdna.idx"
 #location to save intermediate downsampled fastq files
@@ -85,6 +87,6 @@ if not os.path.exists(kal_dir):
 job_file = "ds_kal_job.sh"
 
 make_full_job(sys.argv[1], ds_dir, kal_dir,sys.argv[2], kalfile, job_file)
-`
+```
 
 
