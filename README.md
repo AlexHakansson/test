@@ -9,7 +9,7 @@ This process takes 3 different programs. Kallisto, seqtk and Python
 A docker file for kallisto was found online that will install kallisto and 
 python along with their dependcies.
 
-`RUN apt-get update  && apt-get install -y \
+```RUN apt-get update  && apt-get install -y \`
 		build-essential \
 		cmake \
 		python \
@@ -31,7 +31,7 @@ RUN mkdir build
 WORKDIR /docker/kallisto/build 
 RUN cmake .. && \
 	make && \
-	make install`
+	make install```
 	
 	
 	
